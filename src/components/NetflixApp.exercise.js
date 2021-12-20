@@ -65,8 +65,9 @@ const NetflixApp = () => {
   // 🐶 Créé un state 'headerMovie'
   // 🐶 Créé une constante 'defaultMovieId' avec un id de film par défaut (399566 par exemple)
   // 🐶 utilise ta cley d'api et langue
-  // const apiKey = '4fc7b001e8a107fe1fddc6b41ed0f4af'
-  // const lang = 'fr-fr'
+    const defaultMovieId = '557'
+   const apiKey = '2a90cf56ad9a606649a02486152eacb1'
+   const lang = 'fr-fr'
 
   // 🐶 utilise le hook 'useEffect' pour récupérer le film sur cette url
   // `https://api.themoviedb.org/3/movie/${defaultMovieId}?api_key=${apiKey}&language=${lang}`
