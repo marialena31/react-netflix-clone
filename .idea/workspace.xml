@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e325f73a-0114-47f1-8b09-cd514e5be1e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/NetflixApp.exercise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NetflixApp.exercise.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="exercises/05-fetch-avance" />
+                    <option name="lastUsedInstant" value="1640035504" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="exercises/04-fetch-movies" />
+                    <option name="lastUsedInstant" value="1639965286" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="exercises/03-decoupage-composants" />
+                    <option name="lastUsedInstant" value="1639964739" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="exercises/02-style-material-ui" />
+                    <option name="lastUsedInstant" value="1639961632" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="exercises/01-structure-generale" />
+                    <option name="lastUsedInstant" value="1639961025" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="22WkzzKeEBtjMRXBEqWkvomd3FT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-hooks-avances" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e325f73a-0114-47f1-8b09-cd514e5be1e8" name="Changes" comment="" />
+      <created>1639960996440</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639960996440</updated>
+      <workItem from="1639960997616" duration="5005000" />
+      <workItem from="1639998981876" duration="17000" />
+      <workItem from="1640032809030" duration="3758000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
