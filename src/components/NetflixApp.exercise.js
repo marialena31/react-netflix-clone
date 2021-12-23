@@ -8,7 +8,9 @@ import {clientApi} from '../utils/clientApi'
 import {Alert, AlertTitle} from '@mui/material'
 import CircularProgress from '@mui/material/CircularProgress';
 import {makeStyles} from '@mui/styles'
+import axios from 'axios'
 import './Netflix.css'
+import {useFetchData} from '../utils/hooks'
 
 const useStyles = makeStyles({
     alert: {
@@ -23,50 +25,46 @@ const useStyles = makeStyles({
 
 const NetflixApp = () => {
     const myClasses = useStyles();
-  const [headerMovie, setHeaderMovie] = React.useState()
   const [type] = React.useState(getRandomType())
   const defaultMovieId = getRandomId(type)
-    const [status, setStatus] = React.useState('idle')
-
-
-    const sleep = t => new Promise(resolve => setTimeout(resolve, t))
+    const apiKey = '2a90cf56ad9a606649a02486152eacb1'
+    const lang = 'fr-fr'
+    const API_URL = 'https://api.themoviedb.org/3/'
+    const endpoint = `movie/${defaultMovieId}?`
+    const {data: headerMovie, error, status, execute} = useFetchData()
 
   React.useEffect(() => {
-      setStatus('fetching')
-
-      const clientApi = async endpoint => {
-          const page = 1
-          const startChar = endpoint.includes('?') ? `&` : `?`
-          await sleep(2000)
-          const keyLang = `${startChar}api_key=${apiKey}&language=${lang}&page=${page}`
-          return axios.get(`${API_URL}/${endpoint}${keyLang}`)
-      }
-    clientApi(`${type}/${defaultMovieId}`)
-      .then(response => {
-        setHeaderMovie(response)
-          sleep(2000)
-          setStatus('done')
-      })
-      .catch(error => {
-          console.error(error)
-          setStatus('error')
-      })
+    execute(clientApi(`${type}/${defaultMovieId}`))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  return (
-    <div>
-      <NetflixAppBar />
-      <NetflixHeader movie={headerMovie?.data} type={type} />
-      <NetflixRow wideImage={false} title="Films Netflix" />
-      <NetflixRow wideImage={true} title="Série Netflix" />
-        {status === 'error' ? <div className="myClasses.alert">
-            <Alert severity="error">Error message</Alert>
-        </div> : null}
-        {status === 'fetching' ? <div className="myClasses.progress">
-            <CircularProgress />
-        </div> : null}
-      <NetFlixFooter />
-    </div>
-  )
+
+    if (status === 'error') {
+        // sera catcher par ErrorBoundary
+        throw new Error(error.message)
+    }
+    if(error) {
+        return (
+            <Alert severity="error">
+                <AlertTitle>Une erreur est survenue</AlertTitle>
+                Detail : {error.message}
+            </Alert>
+        )
+    } else {
+        return (
+            <div>
+                <NetflixAppBar/>
+                <NetflixHeader movie={headerMovie?.data} type={type}/>
+                <NetflixRow wideImage={false} title="Films Netflix"/>
+                <NetflixRow wideImage={true} title="Série Netflix"/>
+                {status === 'error' ? <div className="myClasses.alert">
+                    <Alert severity="error">Error message</Alert>
+                </div> : null}
+                {status === 'fetching' ? <div className="myClasses.progress">
+                    <CircularProgress/>
+                </div> : null}
+                <NetFlixFooter/>
+            </div>
+        )
+    }
 }
 export {NetflixApp}
