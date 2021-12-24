@@ -3,8 +3,6 @@ import {NetflixAppBar} from './NetflixAppBar'
 import {NetflixRow} from './NetflixRow'
 import {NetFlixFooter} from './NetFlixFooter'
 import {NetflixHeader} from './NetflixHeader'
-// 🐶 supprime getRandomType nous n'utilisons plus de types aléatoire
-import {getRandomType, getRandomId} from '../utils/helper'
 import {clientApi} from '../utils/clientApi'
 import {makeStyles} from '@mui/styles'
 import {Alert, AlertTitle} from '@mui/material'
@@ -27,8 +25,7 @@ const useStyles = makeStyles(theme => ({
 const NetflixMovies = () => {
   const classes = useStyles()
   const {data: headerMovie, error, status, execute} = useFetchData()
-  // 🐶 fixe le bon type
-  const [type] = React.useState(getRandomType())
+  const [type] = React.useState(TYPE_MOVIE)
   const defaultMovieId = getRandomId(type)
 
   React.useEffect(() => {
